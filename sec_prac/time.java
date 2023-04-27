@@ -56,7 +56,7 @@ public class time {
         }
         else{
             ans.hrs--;
-            ans.min = 60 - max.min;
+            ans.min = 60 - mini.min;
         }
 
         if(max.sec >= mini.sec){
@@ -70,17 +70,3 @@ public class time {
         return ans;
     }
 }
-
-
-/*
-    Test Case:
-  
-    2:40:50
-    3:10:20
-
-    1:10:20
-    0:30:20
-
-    0:29:30
-
- */

@@ -29,7 +29,7 @@ public class main {
         employee[] ea = new employee[5];
 
         time timein = new time(10, 30, 13);
-        time timeout = new time(5, 0, 24);
+        time timeout = new time(17, 0, 24);
         ea[0] = new employee("Sahil", 56, 19, "SDE", 50000);
         ea[0].addAttend(1,1,23,timein,timeout);
         ea[0].addAttend(2,1,23,timein,timeout);
@@ -37,8 +37,9 @@ public class main {
         ea[0].addAttend(4,1,23,timein,timeout);
         ea[0].addAttend(5,1,23,timein,timeout);
         ea[0].display();
-        time temp = ea[0].workingHour(1);
-        System.out.print("Working Hours in month 1: ");
+        time temp = ea[0].workingHourInMonth(1);
+        System.out.print("\nWorking Hours in month 1: ");
         temp.display(temp);
+        ea[0].displayWorkingHoursOnDate(2,1,23);
     }
 }

@@ -31,7 +31,7 @@ public class employee {
         System.out.println("Salary: "+sal);
     }
 
-    time workingHour(int m){
+    time workingHourInMonth(int m){
         time hr = new time(0,0,0);
         for(int i=0;i<days;i++){
             if(a[i].month == m){
@@ -40,5 +40,18 @@ public class employee {
             }
         }
         return hr;
+    }
+
+    int displayWorkingHoursOnDate(int date, int month, int year){
+        for(int i=0;i<days;i++){
+            if(date == a[i].date && month == a[i].month && year == a[i].year){
+                time tt = t.subTime(a[i].time_in, a[i].time_out);
+                System.out.println("\n\nDate: "+date+" "+month+" "+year);
+                System.out.print("Working Time: ");
+                tt.display(tt);
+                return 1;
+            }
+        }
+        return 0;
     }
 }
