@@ -24,7 +24,7 @@ public class employee {
     }
 
     void display(){
-        System.out.println("\n\nName: "+name);
+        System.out.println("\nName: "+name);
         System.out.println("ID: "+id);
         System.out.println("Age: "+age);
         System.out.println("Designation: "+des);
@@ -46,7 +46,7 @@ public class employee {
         for(int i=0;i<days;i++){
             if(date == a[i].date && month == a[i].month && year == a[i].year){
                 time tt = t.subTime(a[i].time_in, a[i].time_out);
-                System.out.println("\n\nDate: "+date+" "+month+" "+year);
+                System.out.println("\n\nWorking Hours On Date: "+date+" "+month+" "+year);
                 System.out.print("Working Time: ");
                 tt.display(tt);
                 return 1;

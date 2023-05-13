@@ -5,11 +5,16 @@ public class main {
 
         // Part A
 
+        System.out.println("\n----------- Part A -----------");
         time t1 = new time(10,10,10);
         time t2 = new time(17,5,5);
+        System.out.print("\nTime 1: ");
+        t1.display(t1);
+        System.out.print("\nTime 2: ");
+        t2.display(t2);
 
         time s = new time(0,0,0);
-        System.out.print("Addition of time: ");
+        System.out.print("\n\nAddition of time: ");
         s = s.addTime(t1, t2);
         s.display(s);
 
@@ -20,12 +25,13 @@ public class main {
 
         // Part B
 
+        System.out.println("\n\n----------- Part B -----------");
         attend a = new attend(t1, t2, 30, 12, 2003);
-        System.out.print("\n");
         a.display();
 
         // Part C
 
+        System.out.println("\n\n----------- Part C -----------");
         employee[] ea = new employee[5];
 
         time timein = new time(10, 30, 13);
