@@ -6,9 +6,11 @@ public class studentone {
     String en;
     String password;
 
-    void init_student(String name, double cgpa, String en, String password) throws exception1, exception2, exception3{
+    void init_student(String name, double cgpa, String en, String password) throws studentException{
+        this.name = name;
+
         if(cgpa<0 || cgpa>10){
-            throw new exception1("Invalid CGPA!");
+            throw new studentException("Invalid CGPA!");
         }
         else{
             this.cgpa = cgpa;
@@ -18,30 +20,27 @@ public class studentone {
         String branch = en.substring(4,7);
         int roll = Integer.parseInt(en.substring(7, 10));
 
-        if(en.length()==10){
-            throw new exception2("Invalid Enrollment Number Length!");
+        if(en.length()!=10){
+            throw new studentException("In Enrollment Number --> Invalid Length!");
         }
-        else if(en.substring(0,2).equals("BE")){
-            throw new exception2("Invalid Enrollment Number Degree Name!");
+        if(!(en.substring(0,2).equals("BE"))){
+            throw new studentException("In Enrollment Number --> Invalid Degree Name!");
         }
-        else if(year>=20 && year<=23){
-            throw new exception2("Invalid Enrollment Number Academic Year!");
+        if(!(year>=20 && year<=23)){
+            throw new studentException("In Enrollment Number --> Invalid Academic Year!");
         }
-        else if((branch.equals("CSU") || branch.equals("ENU") || branch.equals("ECU")|| branch.equals("EEU"))){
-            throw new exception2("Invalid Enrollment Number Branch Name!");
+        if(!((branch.equals("CSU") || branch.equals("ENU") || branch.equals("ECU")|| branch.equals("EEU")))){
+            throw new studentException("In Enrollment Number --> Invalid Branch Name!");
         }
-        else if(roll>=1 && roll<=250){
-            throw new exception2("Invalid Enrollment Number Roll Number!");
-        }
-
-        else{
-            throw new exception2("Invalid Enrollment Number!");
+        if(!(roll>=1 && roll<=250)){
+            throw new studentException("In Enrollment Number --> Invalid Roll Number!");
+        }else{
+            this.en = en;
         }
 
         if(password.length()<8){
-            throw new exception3("Invalid Password Length!");
+            throw new studentException("Invalid Password Length!");
         }
-
         char[] ch = new char[password.length()];
         for (int i = 0; i < password.length(); i++) {
             ch[i] = password.charAt(i);
@@ -68,19 +67,27 @@ public class studentone {
         }
 
         if(countcapital==0){
-            throw new exception3("Password don't have Capital Letter");
+            throw new studentException("Password don't have Capital Letter");
         }
         else if(countnum==0){
-            throw new exception3("Password don't have Number");
+            throw new studentException("Password don't have Number");
         }
         else if( countsmall==0){
-            throw new exception3("Password don't have Small Letter");
+            throw new studentException("Password don't have Small Letter");
         }
         else if(countspecial==0){
-            throw new exception3("Password don't have Special Letter");
+            throw new studentException("Password don't have Special Letter");
         }
         else{
             this.password = password;
         } 
+    }
+
+    void displayInfo(){
+        System.out.println("------ Student Information ------");
+        System.out.println("Name: " + name);
+        System.out.println("CGPA: " + cgpa);
+        System.out.println("Enrollment Number: " + en);
+        System.out.println("Password: " + password);
     }
 }
