@@ -29,6 +29,6 @@ public class FixedDepositeAccount extends BankAccount{
         System.out.println("Aadhar Number: "+aadharNumber);
         System.out.println("Name: "+name);
         System.out.println("Balance: "+balance);
-        System.out.println("Account is Closed! With "+ charge +" Charges.");
+        System.out.println("Account is Closed! With "+ charge +" Charges.\n");
     }
 }

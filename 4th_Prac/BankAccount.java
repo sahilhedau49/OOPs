@@ -18,7 +18,7 @@ public class BankAccount {
 
     void deposit(int amount){
         balance += amount;
-        System.out.println("\n"+amount + "Rs. Deposited!");
+        System.out.println("\n"+amount + "Rs. Deposited!\n");
     }
 
     void updateInterest(){
