@@ -39,16 +39,40 @@ public class main {
             System.out.println("Exception Found! --> "+error);
         }
 
-        // Invalid Password
+        // Invalid Branch in Enrollment No.
         studentone s3 = new studentone();
         try{
             System.out.print("\n");
-            s3.init_student("Sahil",9,"BE22CSU170","Sa1aaaaa");
+            s3.init_student("Sahil",9,"BE22CST210","Sa1$aaaa");
             s3.displayInfo();
         }   
         catch(studentException e){
             String error = e.displayException();
             System.out.println("Exception Found! --> "+error);
+        }
+
+        // Invalid Year in Enrollment No.
+        studentone s4 = new studentone();
+        try{
+            System.out.print("\n");
+            s4.init_student("Sahil",9,"BE25CSU170","Sa1$aaaa");
+            s4.displayInfo();
+        }   
+        catch(studentException e){
+            String error = e.displayException();
+            System.out.println("Exception Found! --> "+error);
+        }
+
+        // Invalid Password
+        studentone s5 = new studentone();
+        try{
+            System.out.print("\n");
+            s5.init_student("Sahil",9,"BE22CSU170","Sa1aaaaa");
+            s5.displayInfo();
+        }   
+        catch(studentException e){
+            String error = e.displayException();
+            System.out.println("Exception Found! --> "+error+"\n");
         }
     }
 }
