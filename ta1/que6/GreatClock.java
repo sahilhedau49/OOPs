@@ -40,7 +40,6 @@ public class GreatClock extends Time {
     }
 
     void display(){
-        // System.out.println("hr: "+h+" min: "+m+" Sec: "+s+" Ms: "+ms);
         System.out.println(h+":"+m+":"+s+":"+ms+" (hr:min:sec:ms)");
     }
 }
