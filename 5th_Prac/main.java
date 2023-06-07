@@ -63,12 +63,72 @@ public class main {
             System.out.println("Exception Found! --> "+error);
         }
 
-        // Invalid Password
+        // Invalid Degree in Enrollment No.
+        studentone s6 = new studentone();
+        try{
+            System.out.print("\n");
+            s6.init_student("Sahil",9,"BS22CSU170","Sa1$aaaa");
+            s6.displayInfo();
+        }   
+        catch(studentException e){
+            String error = e.displayException();
+            System.out.println("Exception Found! --> "+error);
+        }
+
+        // Invalid Password - No special letters
         studentone s5 = new studentone();
         try{
             System.out.print("\n");
             s5.init_student("Sahil",9,"BE22CSU170","Sa1aaaaa");
             s5.displayInfo();
+        }   
+        catch(studentException e){
+            String error = e.displayException();
+            System.out.println("Exception Found! --> "+error);
+        }
+
+        // Invalid Password - length
+        studentone s7 = new studentone();
+        try{
+            System.out.print("\n");
+            s7.init_student("Sahil",9,"BE22CSU170","Sa1aa");
+            s7.displayInfo();
+        }   
+        catch(studentException e){
+            String error = e.displayException();
+            System.out.println("Exception Found! --> "+error);
+        }
+
+        // Invalid Password - No capital letters
+        studentone s8 = new studentone();
+        try{
+            System.out.print("\n");
+            s8.init_student("Sahil",9,"BE22CSU170","sa1aaaaa");
+            s8.displayInfo();
+        }   
+        catch(studentException e){
+            String error = e.displayException();
+            System.out.println("Exception Found! --> "+error);
+        }
+
+        // Invalid Password - No small letters
+        studentone s9 = new studentone();
+        try{
+            System.out.print("\n");
+            s9.init_student("Sahil",9,"BE22CSU170","SA1AAAAA");
+            s9.displayInfo();
+        }   
+        catch(studentException e){
+            String error = e.displayException();
+            System.out.println("Exception Found! --> "+error);
+        }
+
+        // Invalid Password - No numbers
+        studentone s10 = new studentone();
+        try{
+            System.out.print("\n");
+            s10.init_student("Sahil",9,"BE22CSU170","Saaaaaaa");
+            s10.displayInfo();
         }   
         catch(studentException e){
             String error = e.displayException();
