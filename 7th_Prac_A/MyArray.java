@@ -48,5 +48,4 @@ public class MyArray<t> {
             System.out.print(a[i] + " ");
         }
     }
-
 }
