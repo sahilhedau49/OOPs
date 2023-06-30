@@ -1,0 +1,56 @@
+****************
+Customer Name: null
+Customer ID: 1
+
+Products Parchased --> 
+
+Name: Car
+ID: 1000
+Quantity: 1
+Price: 500000
+
+
+Total: 500000
+
+****************
+Customer Name: null
+Customer ID: 2
+
+Products Parchased --> 
+
+Name: 
+ID: 1003
+Quantity: 2
+Price: 60000
+
+
+Total: 120000
+
+****************
+Customer Name: null
+Customer ID: 1
+
+Products Parchased --> 
+
+Name: Car
+ID: 1000
+Quantity: 1
+Price: 500000
+
+
+Total: 500000
+
+****************
+Customer Name: null
+Customer ID: 1
+
+Products Parchased --> 
+
+Name: Car
+ID: 1000
+Quantity: 1
+Price: 500000
+
+
+Total: 500000
+

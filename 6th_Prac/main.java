@@ -1,28 +1,25 @@
 // package 6th_Prac;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
 
 public class main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        // System.out.println("Hello World!");
 
         // Store Initialization
         product[] pro = new product[10];
         pro[0] = new product(1000, "Car", 10, 500000);
-        pro[0].writeToFile(pro[0]);
+        pro[0].writeToFile();
         pro[1] = new product(1001, "Truck", 10, 200000);
-        pro[1].writeToFile(pro[1]);
+        pro[1].writeToFile();
         pro[2] = new product(1002, "Auto", 10, 100000);
-        pro[2].writeToFile(pro[2]);
+        pro[2].writeToFile();
         pro[3] = new product(1003, "Bike", 10, 60000);
-        pro[3].writeToFile(pro[3]);
+        pro[3].writeToFile();
         pro[4] = new product(1004, "Cycle", 10, 10000);
-        pro[4].writeToFile(pro[4]);
+        pro[4].writeToFile();
+        int pro_count = 5;
 
         // Customer Coming
         BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
@@ -30,7 +27,7 @@ public class main {
         int customer_count = -1;
         int flag;
         do {
-            System.out.print("Enter your choice.\n1 --> Buy\n2 --> Exit\nEnter: ");
+            System.out.print("\nEnter your choice.\n1 --> Buy\n2 --> Exit\nEnter: ");
             String s = console.readLine();
             int ch = Integer.parseInt(s);
             flag = 0;
@@ -41,22 +38,33 @@ public class main {
                     s1 = console.readLine();
                     int n = Integer.parseInt(s1);
                     product p[] = new product[n];
-                    System.out.print("Enter Customer name: ");
+                    System.out.print("Enter Customer Name: ");
                     String name = console.readLine();
+                    c[++customer_count] = new customer(name, n);
+
                     for (int j = 0; j < n; j++) {
-                        System.out.print("Enter Product id: ");
+                        System.out.print("\nEnter Product ID: ");
                         s = console.readLine();
-                        int pi = Integer.parseInt(s);
+                        int pid = Integer.parseInt(s);
                         System.out.print("Enter Product Name: ");
                         s = console.readLine();
                         String pname = s;
                         System.out.print("Enter Quantity: ");
                         s = console.readLine();
                         int q = Integer.parseInt(s);
-                        p[j] = new product(pi, pname, q, 0);
+                        int qua = 0, pri = 0;
+                        for (int i = 0; i < pro_count; i++) {
+                            if (pro[i].pi == pid) {
+                                qua = pro[i].q;
+                                pri = pro[i].p;
+                            }
+                        }
+                        p[j] = new product(pid, pname, qua, pri);
+                        System.out.println("\nProduct Details -->");
+                        p[j].display();
+                        c[customer_count].buy(p[j], q);
                     }
-                    c[++customer_count] = new customer(name, n, p);
-                    c[customer_count].writeUserToFile(c[customer_count]);
+                    c[customer_count].writeUserToFile();
                     break;
 
                 case 2:
@@ -65,15 +73,5 @@ public class main {
                     break;
             }
         } while (flag == 0);
-
-        // Deserialization
-        File f = new File("product.txt");
-        FileInputStream fis = new FileInputStream(f);
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        product t1 = (product) ois.readObject();
-        ois.close();
-        t1.display();
-
     }
-
 }
