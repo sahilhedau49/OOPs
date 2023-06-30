@@ -2,9 +2,8 @@
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.Serializable;
 
-public class customer implements Serializable {
+public class customer {
     static int id = 0;
     String ci;
     String name;
@@ -53,7 +52,6 @@ public class customer implements Serializable {
         p[product_count] = p1;
         product.updateproduct(p[product_count], (p1.q - q));
         p[product_count].q = q;
-        // p[product_count].display();
         product_count++;
     }
 }
