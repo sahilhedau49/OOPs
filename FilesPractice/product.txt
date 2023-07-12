@@ -1,0 +1,8 @@
+Product ID: P001
+Name: Example Product
+Quantity: 10
+Price: 9.99
+Product ID: P001
+Name: Example Product
+Quantity: 7
+Price: 9.99

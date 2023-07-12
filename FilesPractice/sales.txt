@@ -1,0 +1,7 @@
+Customer ID: C001
+Name: John Doe
+Product Details:
+  Product ID: P001
+  Name: Example Product
+  Quantity: 10
+  Price: 9.99

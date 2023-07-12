@@ -1,6 +1,6 @@
-public class main{
+public class main {
     public static void main(String[] args) {
-        
+
         // Saving Account 1
         SavingAccount s1 = new SavingAccount(123456, "Sahil", 500);
         s1.withdraw(100);
