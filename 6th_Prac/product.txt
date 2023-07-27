@@ -1,6 +1,6 @@
 name: Car
 id: 1000
-quantity: 9
+quantity: 10
 price: 500000
 
 name: Truck
@@ -15,11 +15,11 @@ price: 100000
 
 name: Bike
 id: 1003
-quantity: 9
+quantity: 10
 price: 60000
 
 name: Cycle
 id: 1004
-quantity: 8
+quantity: 10
 price: 10000
 

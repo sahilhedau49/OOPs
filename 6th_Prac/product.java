@@ -20,14 +20,14 @@ public class product {
     void writeToFile() {
         try {
             FileWriter w = new FileWriter("product.txt", true);
-            BufferedWriter bw = new BufferedWriter(w);
-            bw.write("name: " + name + "\n");
-            bw.write("id: " + pi + "\n");
-            bw.write("quantity: " + q + "\n");
-            bw.write("price: " + p + "\n");
-            bw.write("\n");
-            bw.close();
+            // BufferedWriter bw = new BufferedWriter(w);
+            w.write("name: " + name + "\n");
+            w.write("id: " + pi + "\n");
+            w.write("quantity: " + q + "\n");
+            w.write("price: " + p + "\n");
+            w.write("\n");
             w.close();
+            // w.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
