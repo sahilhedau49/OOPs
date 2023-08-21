@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) throws InterruptedException {
-        // double runs = 0;
         ArrayList<Integer> runs = new ArrayList<>();
-        runs.add(1);
         int size = 6;
 
         Thread client_1 = new Thread(new client(runs, size), "Client 1");

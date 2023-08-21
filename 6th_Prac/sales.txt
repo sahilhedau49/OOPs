@@ -1,0 +1,13 @@
+*******************************
+Customer Name: Sahil
+Customer ID: 1
+
+Products Parchased --> 
+
+Name: Car
+ID: 1001
+Quantity: 1
+Price: 200000
+
+Total: 200000
+

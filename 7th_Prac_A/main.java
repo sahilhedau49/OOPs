@@ -2,7 +2,6 @@
 
 public class main {
     public static void main(String[] args) {
-
         try {
             MyArray<Integer> a = new MyArray<>(5);
             a.add(2);
